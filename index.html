@@ -36,6 +36,7 @@
     />
 
     <style>
+      /* General Styles */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -159,10 +160,15 @@
 
       /* Home cards */
       .home-cards {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Space between cards */
         margin-bottom: 40px;
+      }
+
+      .home-cards > div {
+        flex: 1 1 calc(25% - 20px); /* 4 cards per row on larger screens */
+        box-sizing: border-box;
       }
 
       .home-cards img {
@@ -291,6 +297,19 @@
       }
 
       @media (max-width: 700px) {
+        .home-cards > div {
+          flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+        }
+      }
+
+      @media (max-width: 500px) {
+        .home-cards > div {
+          flex: 1 1 100%; /* 1 card per row on small screens */
+        }
+      }
+
+      /* Media Queries */
+      @media (max-width: 700px) {
         .menu-btn {
           display: block;
         }
@@ -365,6 +384,47 @@
         .links .links-inner ul {
           margin-bottom: 20px;
         }
+
+        .showcase {
+          height: 300px;
+          padding-bottom: 30px;
+        }
+
+        .showcase h2 {
+          font-size: 24px;
+        }
+
+        .showcase p {
+          font-size: 14px;
+        }
+
+        .xbox .content {
+          width: 100%;
+          padding: 30px 20px;
+        }
+
+        .carbon .content {
+          width: 100%;
+          padding: 30px 20px;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer div {
+          margin-bottom: 10px;
+        }
+
+        .footer ul {
+          flex-direction: column;
+        }
+
+        .footer li {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
       }
     </style>
 
@@ -414,9 +474,7 @@
       <header class="showcase">
         <div style="background-color: black; opacity: 80%; padding: 20px">
           <h2 style="color: white">Erol Iphone Mobile Repair</h2>
-          <p style="color: white">
-            Repair Your Iphone Here!
-          </p>
+          <p style="color: white">Repair Your Iphone Here!</p>
           <a href="#" class="btn">
             Explore Now <i class="fas fa-chevron-right"></i>
           </a>
@@ -428,9 +486,7 @@
         <div>
           <img src="https://i.ibb.co/LZPVKq9/card1.png" alt="" />
           <h3>Screen Replacement</h3>
-          <p>
-            Description 1
-          </p>
+          <p>Description 1</p>
           <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
         </div>
         <div>
@@ -439,9 +495,7 @@
             alt=""
           />
           <h3>Trade In</h3>
-          <p>
-            Desc 2
-          </p>
+          <p>Desc 2</p>
           <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
         </div>
         <div>
@@ -450,17 +504,13 @@
             alt=""
           />
           <h3>Pay With Atome</h3>
-          <p>
-            Description 3
-          </p>
+          <p>Description 3</p>
           <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
         </div>
         <div>
           <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
           <h3>Get the latest IPhone</h3>
-          <p>
-            Get it here!
-          </p>
+          <p>Get it here!</p>
           <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
         </div>
       </section>
