@@ -79,8 +79,28 @@ header {
 
 .imac {
   margin-top: 0;
-  background: url("images/hero/iMac/imac_large.jpg");
+  position: relative; /* Establishes a positioning context */
+  background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600") no-repeat center center/cover;
 }
+
+/* Pseudo-element for overlay */
+.imac::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust opacity (0.5 means 50% opacity) */
+  z-index: 1;
+}
+
+/* Ensure text appears above the overlay */
+.imac .title {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* iphone11pro section */
 
@@ -98,6 +118,7 @@ header {
   font-size: 5.6rem;
   line-height: 1.08;
   letter-spacing: 0.005rem;
+  color: black;
 }
 
 .title-sub-heading {
@@ -105,6 +126,21 @@ header {
   margin-top: 0.6rem;
   letter-spacing: 0.008rem;
   font-weight: 400;
+}
+
+.title-heading2 {
+  font-size: 5.6rem;
+  line-height: 1.08;
+  letter-spacing: 0.005rem;
+  color: #FFFFFF;
+}
+
+.title-sub-heading2 {
+  font-size: 2.65rem;
+  margin-top: 0.6rem;
+  letter-spacing: 0.008rem;
+  font-weight: 400;
+  color: #FFFFFF;
 }
 
 .title-price {
@@ -118,11 +154,13 @@ header {
   margin-top: 1.8rem;
 }
 
-.cta-link {
-  color: #66bbff;
+.cta-link,
+.cta-link:visited {
+  color: white;
   font-size: 2.1rem;
   display: inline-block;
 }
+
 
 .cta-link:nth-child(2) {
   margin-left: 2.6rem;
@@ -143,7 +181,7 @@ header {
 }
 
 .cta-link-darker {
-  color: #0070c9;
+  color: white;
 }
 
 .cta-link-darker:hover {
@@ -188,7 +226,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .imac {
-    background: url("images/hero/iMac/imac_medium.jpg");
+    background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600");
   }
   .iphone-12-pro {
     background: url("images/hero/iphone-12-pro/iphone_12_pro_medium.jpg");
@@ -380,7 +418,7 @@ footer {
 
 @media screen and (max-width: 640px) {
   .imac {
-    background: url("images/hero/iMac/imac_small.jpg");
+    background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600");
   }
   .iphone-12-pro {
     background: url("images/hero/iphone-12-pro/iphone_12_pro_small.jpg");
@@ -423,4 +461,25 @@ footer {
   .cta-link {
     font-size: 1.9rem;
   }
+}
+
+.cta-link,
+.cta-link:visited {
+  color: white;
+  font-size: 2.1rem;
+  display: inline-block;
+}
+
+.cta-link:hover {
+  border-bottom: 2px solid #66bbff;
+}
+
+
+.imac::before {
+  pointer-events: none;
+}
+
+.imac .cta {
+  position: relative;
+  z-index: 2;
 }
