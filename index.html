@@ -2,680 +2,152 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-
-    <meta name="apple-mobile-web-app-title" content="CodePen" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
-    />
-
-    <link
-      rel="mask-icon"
-      type="image/x-icon"
-      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
-      color="#111"
-    />
-
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
-
-    <title>Erol Mobile Repair Homepage Clone</title>
-
-    <link rel="canonical" href="https://codepen.io/bradtraversy/pen/ZEGGNRb" />
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Apple</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
-    <style>
-      /* General Styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: #fff;
-        color: #000;
-        font-size: 15px;
-        line-height: 1.5;
-      }
-
-      a {
-        color: #262626;
-        text-decoration: none;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: auto;
-      }
-
-      /* Nav */
-      .main-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 60px;
-        padding: 20px 0;
-        font-size: 13px;
-      }
-
-      .main-nav .logo {
-        width: 110px;
-      }
-
-      .main-nav ul {
-        display: flex;
-      }
-
-      .main-nav ul li {
-        padding: 0 10px;
-      }
-
-      .main-nav ul li a {
-        padding-bottom: 2px;
-      }
-
-      .main-nav ul li a:hover {
-        border-bottom: 2px solid #262626;
-      }
-
-      .main-nav ul.main-menu {
-        flex: 1;
-        margin-left: 20px;
-      }
-
-      .menu-btn {
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        z-index: 2;
-        display: none;
-      }
-
-      .btn {
-        cursor: pointer;
-        display: inline-block;
-        border: 0;
-        font-weight: bold;
-        padding: 10px 20px;
-        background: #262626;
-        color: #fff;
-        font-size: 15px;
-      }
-
-      .btn:hover {
-        opacity: 0.9;
-      }
-
-      .dark {
-        color: #fff;
-      }
-
-      .dark .btn {
-        background: #f4f4f4;
-        color: #333;
-      }
-
-      /* Showcase */
-      .showcase {
-        width: 100%;
-        height: 400px;
-        background: url("https://scontent.fkul18-2.fna.fbcdn.net/v/t39.30808-6/338566698_579222700827053_9168616671116836508_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=wcHc9yTcfy8Q7kNvgEaImIk&_nc_zt=23&_nc_ht=scontent.fkul18-2.fna&_nc_gid=AESLB793kFm7TqkqmJ-ztkB&oh=00_AYC1N4B8cXG8fVunpEN6_0ydikxnioI-pQtzKLFp9UeSOA&oe=67A1EA0E")
-          no-repeat center center/cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: flex-end;
-        padding-bottom: 50px;
-        margin-bottom: 20px;
-      }
-
-      .showcase h2,
-      .showcase p {
-        margin-bottom: 10px;
-      }
-
-      .showcase .btn {
-        margin-top: 20px;
-      }
-
-      /* Home cards */
-      .home-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Space between cards */
-        margin-bottom: 40px;
-      }
-
-      .home-cards > div {
-        flex: 1 1 calc(25% - 20px); /* 4 cards per row on larger screens */
-        box-sizing: border-box;
-      }
-
-      .home-cards img {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .home-cards h3 {
-        margin-bottom: 5px;
-      }
-
-      .home-cards a {
-        display: inline-block;
-        padding-top: 10px;
-        color: #0067b8;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-
-      .home-cards a:hover i {
-        margin-left: 10px;
-      }
-
-      /* Xbox */
-      .xbox {
-        width: 100%;
-        height: 350px;
-        background: url("https://i.ibb.co/tBJGPD9/xbox.png") no-repeat center
-          center/cover;
-        margin-bottom: 20px;
-      }
-
-      .xbox .content {
-        width: 40%;
-        padding: 50px 0 0 30px;
-      }
-
-      .xbox p,
-      .carbon p {
-        margin: 10px 0 20px;
-      }
-
-      /* Carbon */
-      .carbon {
-        width: 100%;
-        height: 350px;
-        background: url("https://i.ibb.co/72cgtsz/carbon.jpg") no-repeat center
-          center/cover;
-      }
-
-      .carbon .content {
-        width: 55%;
-        padding: 100px 0 0 30px;
-      }
-
-      /* Follow */
-      .follow {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 30px 0 30px;
-      }
-
-      .follow * {
-        margin-right: 10px;
-      }
-
-      /* Links */
-      .links {
-        background: #f2f2f2;
-        color: #616161;
-        font-size: 12px;
-        padding: 35px 0;
-      }
-
-      .links-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 10px;
-        align-items: flex-start;
-        justify-content: center;
-      }
-
-      .links li {
-        line-height: 2.8;
-      }
-
-      /* Footer */
-      .footer {
-        background: #f2f2f2;
-        color: #616161;
-        font-size: 12px;
-        padding: 20px 0;
-      }
-
-      .footer-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .footer div {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-      }
-
-      .footer div i {
-        margin-right: 10px;
-      }
-
-      .footer ul {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .footer li {
-        margin-right: 30px;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 700px) {
-        .home-cards > div {
-          flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
-        }
-      }
-
-      @media (max-width: 500px) {
-        .home-cards > div {
-          flex: 1 1 100%; /* 1 card per row on small screens */
-        }
-      }
-
-      /* Media Queries */
-      @media (max-width: 700px) {
-        .menu-btn {
-          display: block;
-        }
-
-        .menu-btn:hover {
-          opacity: 0.5;
-        }
-
-        .main-nav ul.right-menu {
-          margin-right: 50px;
-        }
-
-        .main-nav ul.main-menu {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #f2f2f2;
-          width: 50%;
-          height: 100%;
-          border-right: #ccc 1px solid;
-          opacity: 0.9;
-          padding: 30px;
-          transform: translateX(-500px);
-          transition: transform 0.5s ease-in-out;
-        }
-
-        .main-nav ul.main-menu li {
-          padding: 10px;
-          border-bottom: #ccc solid 1px;
-          font-size: 14px;
-        }
-
-        .main-nav ul.main-menu li:last-child {
-          border-bottom: 0;
-        }
-
-        .main-nav ul.main-menu.show {
-          transform: translateX(-20px);
-        }
-
-        .home-cards {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .xbox .content p {
-          display: none;
-        }
-
-        .xbox .content h2 {
-          margin-bottom: 20px;
-        }
-
-        .carbon .content {
-          width: 85%;
-        }
-
-        .links .links-inner {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 500px) {
-        .home-cards {
-          grid-template-columns: 1fr;
-        }
-
-        .links .links-inner {
-          grid-template-columns: 1fr;
-        }
-
-        .links .links-inner ul {
-          margin-bottom: 20px;
-        }
-
-        .showcase {
-          height: 300px;
-          padding-bottom: 30px;
-        }
-
-        .showcase h2 {
-          font-size: 24px;
-        }
-
-        .showcase p {
-          font-size: 14px;
-        }
-
-        .xbox .content {
-          width: 100%;
-          padding: 30px 20px;
-        }
-
-        .carbon .content {
-          width: 100%;
-          padding: 30px 20px;
-        }
-
-        .footer-inner {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .footer div {
-          margin-bottom: 10px;
-        }
-
-        .footer ul {
-          flex-direction: column;
-        }
-
-        .footer li {
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-      }
-    </style>
-
-    <script>
-      window.console = window.console || function (t) {};
-    </script>
   </head>
 
-  <body translate="no">
-    <div class="menu-btn">
-      <i class="fas fa-bars fa-2x"></i>
-    </div>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-list nav-list-mobile">
+            <li class="nav-item">
+              <div class="mobile-menu">
+                <span class="line line-top"></span>
+                <span class="line line-bottom"></span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="index.html" class="nav-link nav-link-apple"> </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link-bag"> </a>
+            </li>
+          </ul>
+          <!-- nav list and nav list mobile  -->
+          <ul class="nav-list nav-list-larger">
+            <li class="nav-item nav-item-hidden">
+              <a href="index.html" class="nav-link nav-link-apple"> </a>
+            </li>
+            <li class="nav-item">
+              <a href="#iMac" class="nav-link">Mac </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">iPad </a>
+            </li>
+            <li class="nav-item">
+              <a href="#iphone12pro" class="nav-link">iPhone </a>
+            </li>
+            <li class="nav-item">
+              <a href="#watch" class="nav-link">Watch </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">TV </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Music </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Support </a>
+            </li>
 
-    <div class="container">
-      <!-- Nav -->
-      <nav class="main-nav">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyqKiZIYCqCxjgvPPm9-ciZ9_j2ohIREADKg&s"
-          alt="Erol Mobile Repair"
-          class="logo"
-        />
+            <li class="nav-item">
+              <a href="#" class="nav-link nav-link-search"> </a>
+            </li>
+            <li class="nav-item nav-item-hidden">
+              <a href="#" class="nav-link nav-link-bag"> </a>
+            </li>
+          </ul>
+          <!-- nav list nav list larger  -->
+        </nav>
+      </div>
+    </header>
 
-        <ul class="main-menu">
-          <li><a href="#">IPhone</a></li>
-          <li><a href="#">Ipad</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-
-        <ul class="right-menu">
-          <li>
-            <a href="#">
-              <i class="fas fa-search"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Showcase -->
-      <header class="showcase">
-        <div style="background-color: black; opacity: 80%; padding: 20px">
-          <h2 style="color: white">Erol Iphone Mobile Repair</h2>
-          <p style="color: white">Repair Your Iphone Here!</p>
-          <a href="#" class="btn">
-            Explore Now <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </header>
-
-      <!-- Home cards 11 -->
-      <section class="home-cards">
-        <div>
-          <img src="https://i.ibb.co/LZPVKq9/card1.png" alt="" />
-          <h3>Screen Replacement</h3>
-          <p>Description 1</p>
-          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-        </div>
-        <div>
-          <img
-            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/online-step3-card-tradein-202303?wid=750&hei=456&fmt=png-alpha&.v=1679589167301"
-            alt=""
-          />
-          <h3>Trade In</h3>
-          <p>Desc 2</p>
-          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-        </div>
-        <div>
-          <img
-            src="https://cdn1.npcdn.net/images/5d2e93970e2b98eb59f005368966ae86_1695968319.webp?md5id=df3abfaa6336c64811b77e86b9cb17b0&new_width=1000&new_height=1000&w=1701677433&from=png"
-            alt=""
-          />
-          <h3>Pay With Atome</h3>
-          <p>Description 3</p>
-          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-        </div>
-        <div>
-          <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
-          <h3>Get the latest IPhone</h3>
-          <p>Get it here!</p>
-          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-        </div>
-      </section>
-
-      <!-- Xbox -->
-      <section class="xbox">
-        <div class="content">
-          <h2>Other Services</h2>
-          <p>
-            Xbox Game Pass Ultimate Xbox Live Gold and over 100 high-quality
-            console and PC games. Play together with friends and discover your
-            next favorite game.
+    <section class="hero imac" id="iMac">
+      <div class="container">
+        <div class="title title-dark">
+          <h2 class="title-heading">Erol Mobile Repair</h2>
+          <h3 class="title-sub-heading">One stop for your mobile repair</h3>
+          <p class="title-price">
+            <span class="review-stars">
+              <i class="fas fa-star" style="color: #ffc107"></i>
+              <i class="fas fa-star" style="color: #ffc107"></i>
+              <i class="fas fa-star" style="color: #ffc107"></i>
+              <i class="fas fa-star" style="color: #ffc107"></i>
+              <i class="fas fa-star-half-alt" style="color: #ffc107"></i>
+            </span>
+            4.6 stars on google review
           </p>
-          <a href="#" class="btn">
-            Join Now <i class="fas fa-chevron-right"></i>
-          </a>
         </div>
-      </section>
-
-      <!-- Home cards 2 -->
-      <section class="home-cards">
-        <div>
-          <img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
-          <h3>Erol Mobile Repair Teams</h3>
-          <p>Unleash the power of your team.</p>
-          <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
+        <div class="cta">
+          <a href="#" class="cta-link">Learn More</a>
+          <a href="#" class="cta-link">Buy</a>
         </div>
-        <div>
-          <img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
-          <h3>Unlock the power of learning</h3>
-          <p>
-            Get students future-ready with Windows 10 devices. Starting at $219.
-          </p>
-          <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
-        </div>
-        <div>
-          <img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
-          <h3>Windows 10 Enterprise</h3>
-          <p>Download the free 90-day evaluation for IT professionals.</p>
-          <a href="#">Download Now <i class="fas fa-chevron-right"></i></a>
-        </div>
-        <div>
-          <img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
-          <h3>Explore Kubernetes</h3>
-          <p>
-            Learn how Kubernetes works and get started with cloud native app
-            development today.
-          </p>
-          <a href="#">Get Started <i class="fas fa-chevron-right"></i></a>
-        </div>
-      </section>
-
-      <!-- Carbon -->
-      <section class="carbon dark">
-        <div class="content">
-          <h2>Commiting To Carbon Negative</h2>
-          <p>
-            Erol Mobile Repair will be carbon negative by 2030 and by 2050 we
-            will remove all carbon the company has emitted since it was founded
-            in 1975
-          </p>
-          <a href="#" class="btn">
-            Learn More <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      </section>
-
-      <!-- Follow -->
-      <section class="follow">
-        <p>Follow Erol Mobile Repair</p>
-        <a href="https://facebook.com">
-          <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
-        </a>
-        <a href="https://twitter.com">
-          <img
-            src="https://i.ibb.co/vJvbLwm/social-twitter.png"
-            alt="Twitter"
-          />
-        </a>
-        <a href="https://linkedin.com">
-          <img
-            src="https://i.ibb.co/b30HMhR/social-linkedin.png"
-            alt="Linkedin"
-          />
-        </a>
-      </section>
-    </div>
-    <!-- Links -->
-    <section class="links">
-      <div class="links-inner">
-        <ul>
-          <li><h3>What's New</h3></li>
-          <li><a href="#">Surface Pro X</a></li>
-          <li><a href="#">Surface Laptop 3</a></li>
-          <li><a href="#">Surface Pro 7</a></li>
-          <li><a href="#">Windows 10 apps</a></li>
-          <li><a href="#">Office apps</a></li>
-        </ul>
-        <ul>
-          <li><h3>Erol Mobile Repair Store</h3></li>
-          <li><a href="#">Account Profile</a></li>
-          <li><a href="#">Download Center</a></li>
-          <li><a href="#">Erol Mobile Repair Store support</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Older tracking</a></li>
-        </ul>
-        <ul>
-          <li><h3>Education</h3></li>
-          <li><a href="#">Microsfot in education</a></li>
-          <li><a href="#">Office for students</a></li>
-          <li><a href="#">Office 365 for schools</a></li>
-          <li><a href="#">Deals for studentss</a></li>
-          <li><a href="#">Microsfot Azure</a></li>
-        </ul>
-        <ul>
-          <li><h3>Enterprise</h3></li>
-          <li><a href="#">Azure</a></li>
-          <li><a href="#">AppSource</a></li>
-          <li><a href="#">Automotive</a></li>
-          <li><a href="#">Government</a></li>
-          <li><a href="#">Healthcare</a></li>
-        </ul>
-        <ul>
-          <li><h3>Developer</h3></li>
-          <li><a href="#">Visual Studio</a></li>
-          <li><a href="#">Windowszs Dev Center</a></li>
-          <li><a href="#">Developer Network</a></li>
-          <li><a href="#">TechNet</a></li>
-          <li><a href="#">Erol Mobile Repair Developer</a></li>
-        </ul>
-        <ul>
-          <li><h3>Company</h3></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About Erol Mobile Repair</a></li>
-          <li><a href="#">Company news</a></li>
-          <li><a href="#">Privacy at Erol Mobile Repair</a></li>
-          <li><a href="#">Inverstors</a></li>
-        </ul>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div><i class="fas fa-globe fa-2x"></i> English (United States)</div>
-        <ul>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Contact Erol Mobile Repair</a></li>
-          <li><a href="#">Privacy & cookies</a></li>
-          <li><a href="#">Terms of use</a></li>
-          <li><a href="#">Trademarks</a></li>
-          <li><a href="#">Safety & eco</a></li>
-          <li><a href="#">About our ads</a></li>
-          <li><a href="#">&copy; Erol Mobile Repair 2020</a></li>
-        </ul>
+    <section class="hero iphone-12-pro" id="iphone12pro">
+      <div class="container">
+        <div class="title">
+          <h2 class="title-heading">iPhone 12 Pro</h2>
+          <h3 class="title-sub-heading">It's a leap year</h3>
+          <p class="title-price">
+            From $41.62/mo. for 24 mo. or $999 before trade‑in
+          </p>
+        </div>
+        <div class="cta">
+          <a href="#" class="cta-link">Learn More</a>
+          <a href="#" class="cta-link">Buy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero iphone-12">
+      <div class="container">
+        <div class="title title-dark">
+          <h2 class="title-heading">iPhone 12</h2>
+          <h3 class="title-sub-heading">Purple. Now in season</h3>
+          <p class="title-price">
+            From $29.12/mo. for 24 mo. or $699 before trade‑in<br />
+            Purple available 4.30
+          </p>
+        </div>
+        <div class="cta">
+          <a href="#" class="cta-link">Learn More</a>
+          <a href="#" class="cta-link">Buy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero watch" id="watch">
+      <div class="container">
+        <div class="title title-dark">
+          <h2 class="title-heading-watch"></h2>
+          <h3 class="title-sub-heading">
+            The future of health is on your wrist
+          </h3>
+        </div>
+        <div class="cta">
+          <a href="#" class="cta-link">Learn More</a>
+          <a href="#" class="cta-link">Buy</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="padding: 10px">
+      <div class="container">
+        <p>Erol Iphone Repair</p>
       </div>
     </footer>
-
-    <script id="rendered-js">
-      document
-        .querySelector(".menu-btn")
-        .addEventListener("click", () =>
-          document.querySelector(".main-menu").classList.toggle("show")
-        );
-      //# sourceURL=pen.js
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
