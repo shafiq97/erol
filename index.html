@@ -13,6 +13,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- jQuery (required for Slick Carousel) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Slick Carousel JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </head>
 
   <body>
@@ -109,16 +129,12 @@
     <section class="hero iphone-12-pro" id="iphone12pro">
       <div class="container">
         <div class="title">
-          <h2 class="title-heading">Our Services</h2>
+          <h2 class="title-heading">Services</h2>
           <h3 class="title-sub-heading">iPhone trade in</h3>
           <h3 class="title-sub-heading">Free Consultation</h3>
           <h3 class="title-sub-heading">Phone Accessories</h3>
           <h3 class="title-sub-heading">Trade in your iPhone</h3>
           <h3 class="title-sub-heading">Face to face onsite repair</h3>
-        </div>
-        <div class="cta">
-          <a href="#" class="cta-link">Learn More</a>
-          <a href="#" class="cta-link">Buy</a>
         </div>
       </div>
     </section>
@@ -154,7 +170,7 @@
 
           <p class="title-price" style="text-align: justify; margin-top: 20px">
             <a
-            target="_blank"
+              target="_blank"
               href="https://www.google.com/search?q=erol+mobile+repair&rlz=1C5MACD_enMY1040MY1040&oq=erol+mobile+repair&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQLhivARjHARiABDIHCAIQABiABDIHCAMQABiABDIICAQQABgWGB4yDQgFEAAYhgMYgAQYigUyBggGEEUYPDIGCAcQRRg90gEINDExNWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x6f100c1581901d83:0x74289a5a4ad16389,1,,,,"
             >
               <span style="color: blue">View more..</span></a
@@ -172,13 +188,39 @@
     <section class="hero iphone-12">
       <div class="container">
         <div class="title title-dark">
-          <h2 class="title-heading">Gallery</h2>
-          <h3 class="title-sub-heading">Purple. Now in season</h3>
-          <img src="https://lh3.googleusercontent.com/p/AF1QipMBZb-yRuvls3Vq1SN3pz9Mp3AOPj8kE0452xAY=s1360-w1360-h1020" alt="">
-          <p class="title-price">
-            From $29.12/mo. for 24 mo. or $699 before trade‑in<br />
-            Purple available 4.30
-          </p>
+          <h2 class="title-heading">Premise</h2>
+          <!-- Slider container -->
+          <div class="slider">
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/p/AF1QipMBZb-yRuvls3Vq1SN3pz9Mp3AOPj8kE0452xAY=s1360-w1360-h1020"
+                alt="On premise"
+                class="gallery-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/p/AF1QipNtIitcdbDKI8nvWujcznKwIDUoToTf4oM3XYmC=s1360-w1360-h1020"
+                alt="On premise"
+                class="gallery-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/p/AF1QipMwjTNqjXl0OfYlyPz6dxNvV72KHr8IvPFEyTaj=s1360-w1360-h1020"
+                alt="On premise"
+                class="gallery-img"
+              />
+            </div>
+            <div>
+              <img
+                src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB9Zbtwrx30hGBYaBrYjAiinp2BSOWje5DbF_D-IBmj1dqSu5_K9ETGLfIlccG39G1Dm5-dqbjpB_BuZYrdn1QRXZEjg3EGtUZql2OOhZ6fSLc7SXPrDKKYpG3fSjnL_c5KEzF_q=s1360-w1360-h1020"
+                alt="Image 3"
+                class="gallery-img"
+              />
+            </div>
+            <!-- Add more images as needed -->
+          </div>
         </div>
         <div class="cta">
           <a href="#" class="cta-link">Learn More</a>
@@ -202,6 +244,10 @@
       </div>
     </section>
 
+    <a href="#" class="go-top" id="goTop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
     <!-- Floating WhatsApp Button -->
     <a
       href="https://wa.me/+60126866570?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
@@ -213,9 +259,72 @@
 
     <footer style="padding: 10px">
       <div class="container">
-        <p>Erol Mobile Repair</p>
+        <p>Erol Mobile Repair 2025</p>
       </div>
     </footer>
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <!-- Close button -->
+      <span class="close">&times;</span>
+      <!-- The enlarged image -->
+      <img class="modal-content" id="modalImg" />
+      <!-- Optional: caption text if you want to show alt text -->
+      <div id="caption"></div>
+    </div>
+    <script>
+      const galleryImg = document.querySelector(".gallery-img");
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.querySelector(".close");
+
+      // Show modal on image click
+      galleryImg.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = galleryImg.src;
+        captionText.textContent = galleryImg.alt;
+      });
+
+      // Close modal on X button click
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // Also close modal if clicking outside the image (on the background)
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          centerMode: true,
+          centerPadding: "20%", // Adjust this value for how much of the adjacent slides you want visible
+          slidesToShow: 1,
+          arrows: true, // Shows the left/right arrows for navigation
+          dots: true, // Optional: show pagination dots
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                centerPadding: "10%", // Adjust for smaller screens
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script>
+      // Using plain JavaScript for smooth scroll to top
+      document.getElementById("goTop").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
     <script src="main.js"></script>
   </body>
 </html>
