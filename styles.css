@@ -13,7 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 a {
   display: block;
   text-decoration: none;
@@ -81,7 +80,8 @@ header {
 .imac {
   margin-top: 0;
   position: relative; /* Establishes a positioning context */
-  background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600") no-repeat center center/cover;
+  background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600")
+    no-repeat center center/cover;
 }
 
 /* Pseudo-element for overlay */
@@ -101,7 +101,6 @@ header {
   position: relative;
   z-index: 2;
 }
-
 
 /* iphone11pro section */
 
@@ -134,7 +133,7 @@ header {
   font-size: 5.6rem;
   line-height: 1.08;
   letter-spacing: 0.005rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .title-sub-heading2 {
@@ -142,13 +141,16 @@ header {
   margin-top: 0.6rem;
   letter-spacing: 0.008rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .title-price {
   font-size: 1.7rem;
   color: #888;
   margin-top: 0.68rem;
+  text-align: justify;       
+  -moz-text-align-last: center;
+  text-align-last: center;  
 }
 
 .cta {
@@ -162,7 +164,6 @@ header {
   font-size: 2.1rem;
   display: inline-block;
 }
-
 
 .cta-link:nth-child(2) {
   margin-left: 2.6rem;
@@ -476,7 +477,6 @@ footer {
   border-bottom: 2px solid #66bbff;
 }
 
-
 .imac::before {
   pointer-events: none;
 }
@@ -484,4 +484,35 @@ footer {
 .imac .cta {
   position: relative;
   z-index: 2;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%;
+  /* Make the container a flexbox to center the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.whatsapp-icon {
+  font-size: 28px;
+  color: #fff;
+  /* Remove any line-height, as flex will handle centering */
+  line-height: normal;
+}
+
+/* Ensures any image inside the .title element scales down as needed */
+.title img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra spacing below inline images */
+  margin: 2rem auto; /* Optional: center the image with some vertical spacing */
 }
