@@ -13,6 +13,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 a {
   display: block;
   text-decoration: none;
@@ -207,14 +208,14 @@ footer {
   color: white;
   font-size: medium;
 }
-/* Move this to bottom of style.css file always */
+
 .hero {
   height: 69.2rem;
   background-size: auto 74;
   background-position: center;
   background-repeat: no-repeat;
-  border-top: 0.6rem solid #fff;
-  border-bottom: 0.6rem solid #fff;
+  /* border-top: 0.6rem solid #fff;
+  border-bottom: 0.6rem solid #fff; */
 }
 
 .imac {
