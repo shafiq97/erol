@@ -106,6 +106,8 @@ header {
 
 .iphone-12-pro {
   background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
+  background-size: cover;
+
 }
 
 .title {
@@ -242,7 +244,7 @@ footer {
   .hero {
     height: 65rem;
     background-size: auto;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
   }
 
@@ -434,7 +436,7 @@ footer {
   .hero {
     height: 54rem;
     background-size: auto 55rem;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
   }
   .title {
@@ -638,5 +640,18 @@ footer {
   font-size: 1.4rem;  /* Smaller text */
   color: #333;
 }
+
+.full-width-bg {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 
