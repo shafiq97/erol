@@ -218,6 +218,7 @@ footer {
   background-size: auto 74;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 50px;
 }
 
 .imac {
@@ -242,7 +243,7 @@ footer {
     background: url("images/hero/watch/watch_medium.jpg");
   }
   .hero {
-    height: 65rem;
+    height: auto;
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -434,7 +435,7 @@ footer {
     background: url("images/hero/watch/watch_small.jpg");
   }
   .hero {
-    height: 54rem;
+    height: auto;
     background-size: auto 55rem;
     background-position: center;
     background-repeat: no-repeat;
