@@ -211,12 +211,11 @@ footer {
 }
 
 .hero {
-  height: 69.2rem;
+  /* Alternatively, remove height completely if you want content-based sizing: */
+  height: auto;
   background-size: auto 74;
   background-position: center;
   background-repeat: no-repeat;
-  /* border-top: 0.6rem solid #fff;
-  border-bottom: 0.6rem solid #fff; */
 }
 
 .imac {
@@ -613,3 +612,31 @@ footer {
   color: #fff;
   line-height: normal;
 }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+  gap: 1rem;                         /* Adjust gap as needed */
+  margin-top: 2rem;
+}
+
+.service-item {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-item i {
+  font-size: 2rem;    /* Smaller icon size */
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.service-title {
+  font-size: 1.4rem;  /* Smaller text */
+  color: #333;
+}
+
+
