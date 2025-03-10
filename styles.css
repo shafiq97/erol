@@ -105,7 +105,7 @@ header {
 /* iphone11pro section */
 
 .iphone-12-pro {
-  background: url("images/hero/iphone-12-pro/iphone_12_pro_large.jpg");
+  background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
 }
 
 .title {
@@ -126,6 +126,7 @@ header {
   margin-top: 0.6rem;
   letter-spacing: 0.008rem;
   font-weight: 400;
+  color: black;
 }
 
 .title-heading2 {
@@ -173,7 +174,7 @@ header {
 /* iphone 11 section */
 
 .iphone-12 {
-  background: url("images/hero/iphone-12/hero_iphone_12_large.jpg");
+  background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
 }
 
 .title-dark {
@@ -229,10 +230,10 @@ footer {
     background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600");
   }
   .iphone-12-pro {
-    background: url("images/hero/iphone-12-pro/iphone_12_pro_medium.jpg");
+    background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
   }
   .iphone-12 {
-    background: url("images/hero/iphone-12/hero_iphone_12_small.jpg");
+    background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
   }
   .watch {
     background: url("images/hero/watch/watch_medium.jpg");
@@ -421,7 +422,7 @@ footer {
     background: url("https://grademobile.co.uk/media/1409/catalog/all%201-15.png?size=600");
   }
   .iphone-12-pro {
-    background: url("images/hero/iphone-12-pro/iphone_12_pro_small.jpg");
+    background: url("https://www.umidigi.com/new/Images/index2024/mobile/note1005g.webp");
   }
   .iphone-12 {
     background: url("images/hero/iphone-12/hero_iphone_12_small.jpg");
