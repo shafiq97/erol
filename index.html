@@ -313,17 +313,19 @@
       <div id="caption"></div>
     </div>
     <script>
-      const galleryImg = document.querySelector(".gallery-img");
+      const galleryImgs = document.querySelectorAll(".gallery-img");
       const modal = document.getElementById("imageModal");
       const modalImg = document.getElementById("modalImg");
       const captionText = document.getElementById("caption");
       const closeBtn = document.querySelector(".close");
 
-      // Show modal on image click
-      galleryImg.addEventListener("click", () => {
-        modal.style.display = "block";
-        modalImg.src = galleryImg.src;
-        captionText.textContent = galleryImg.alt;
+      // Loop over all gallery images and add click event listener
+      galleryImgs.forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          captionText.textContent = img.alt;
+        });
       });
 
       // Close modal on X button click
